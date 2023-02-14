@@ -15,6 +15,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
+# Setting app to use a wide layout 
+st.set_page_config(layout = "wide")
 
 # Reading datasets from local repo
 
@@ -114,8 +116,7 @@ data = pd.merge(df_clean, df_noc, on='NOC', how='left')
 ##                        (Data is READY to be USED)
 # ========================================================================
 
-# Setting app to use a wide layout 
-st.set_page_config(layout = "wide")
+
 
 
 # Setting css style for title and sub-title usinf custom functions
