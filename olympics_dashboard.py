@@ -26,7 +26,7 @@ df_noc = pd.read_csv('noc_regions.csv')
 # ========================================================================
 #               Data Pre=processing (Cleaning/Conversion) 
 # ========================================================================
-'''
+
 # 1.  The column types are Ok. Only Age can be converted into int64 however the net result is same so we don't go for typecasting overhead
 #      I confirmed that age dimesion can safely be converted since no age is in fractions using following command
 #       df[(df['Age']-round(df['Age']))>0]
@@ -38,7 +38,7 @@ df_noc = pd.read_csv('noc_regions.csv')
 #     on these dimensions' values hence we can't just drop these missing value however we jsut 
 #     replace them with suitable ones
 
-'''
+
 
 #           ** Methodology: Step 1 **
 ### Firstly we'll check that if 0, 0, 0 and "NM" (No Medal) are not already assigned to age, height, weight and medal respectively  
