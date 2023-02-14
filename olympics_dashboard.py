@@ -86,14 +86,14 @@ print(df[df['Weight'].isna()])
 df=df.sort_values(by='ID')
 df= df.sort_index(ascending=True)
 
-df[df.duplicated()].shape
+print(df[df.duplicated()].shape)
 
 
 # So we have 1385 duplicated values as confirmed by manual inspection as well. So we drop them
 df_clean=df.drop_duplicates()
 
 # After duplucation removal we have 269731 records available. Our data is free from Nan/Null and duplicated values
-df_clean.shape
+print(df_clean.shape)
 
 
 ##                     *** Dealing with NOC Data ***
