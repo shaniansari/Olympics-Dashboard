@@ -320,7 +320,9 @@ with st.container():
         # Exception handling for EMPTY dataframes 
         if not(medals_hist.empty):
             hist_plot = plt.figure()
-            sns.histplot(data=medals_hist, x="Age", bins=10)
+          
+            # We have mnaully set bins till 80 because the max: age we found is 73
+            sns.histplot(data=medals_hist, x="Age", bins=[0, 10, 20, 30, 40, 50, 60,70,80])
             #plt.title('Medal Count Age-wise')
             plt.xlabel('Age of Athlete')
             plt.ylabel('Medals Won')
