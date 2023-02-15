@@ -18,6 +18,24 @@ import matplotlib.pyplot as plt
 # Setting app to use a wide layout 
 st.set_page_config(layout = "wide")
 
+# Adding background
+
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://as2.ftcdn.net/v2/jpg/00/20/60/77/1000_F_20607797_CfLnzbbZB0NBp9QMfZR7GzDNooDnmtzo.jpg");
+             background-attachment: fixed;
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+
+add_bg_from_url() 
+
 # Reading datasets from local repo
 
 df = pd.read_csv('athlete_events.csv')
